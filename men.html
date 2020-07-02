@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>KGC Sneaker Co.</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="title">KGC Sneaker Co.</h1>
+			<a href="index.html"><img id="logo" src="images/koala_logo.png" alt="KPG Sneaker Co. Logo"></a>
+			<div class="navdiv">
+				<nav class="navbar">
+				<a href="index.html">Home</a>
+				<a href="men.html">Men</a>
+				<a href="women.html">Women</a>
+				<a href="about.html">About</a>
+				<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+		</header>
+		
+		<section>
+		
+			<div class="slideshow">
+				<h2>Sport</h2>
+				<div class="slide fade">
+					<div class="numbertext">1 / 4</div>
+					<img src="images/men01.jpg" style="width:500px">
+					<div class="text">Pantheos</div>
+				</div>
+				<div class="slide fade">
+					<div class="numbertext">2 / 4</div>
+					<img src="images/men02.jpg" style="width:500px">
+					<div class="text">Commuter</div>
+				</div>
+				<div class="slide fade">
+					<div class="numbertext">3 / 4</div>
+					<img src="images/men04.jpg" style="width:500px">
+					<div class="text">Monarch IV</div>
+				</div>
+				<div class="slide fade">
+					<div class="numbertext">4 / 4</div>
+					<img src="images/men07.jpg" style="width:500px">
+					<div class="text">Eclipse</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+					
+				</div>
+				<br>
+				
+				<div class="slideshow">
+					<h2>Street</h2>
+				<div class="slide2 fade">
+					<div class="numbertext">1 / 5</div>
+					<img src="images/men03.jpg" style="width:500px">
+					<div class="text">Pegasus</div>
+				</div>
+				<div class="slide2 fade">
+					<div class="numbertext">2 / 5</div>
+					<img src="images/men05.jpg" style="width:500px">
+					<div class="text">Classic Cortez</div>
+				</div>
+				<div class="slide2 fade">
+					<div class="numbertext">3 / 5</div>
+					<img src="images/men06.jpg" style="width:500px">
+					<div class="text">Nightgazer</div>
+				</div>
+				<div class="slide2 fade">
+					<div class="numbertext">4 / 5</div>
+					<img src="images/men08.jpg" style="width:500px">
+					<div class="text">First Class</div>
+				</div>
+				<div class="slide2 fade">
+					<div class="numbertext">5 / 5</div>
+					<img src="images/men09.jpg" style="width:500px">
+					<div class="text">Basic Jewel</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+				
+			</div>
+			<br>
+			
+			
+			<script>
+			
+				var slideIndex = [1,1];
+				var slideId = ["slide", "slide2"];
+				showSlides(1, 0);
+				showSlides(1, 1);
+
+				function plusSlides(n, no) {
+					showSlides(slideIndex[no] += n, no);
+				}
+				
+				function currentSlide(n, no) {
+					showSlides(slideIndex = n, no);
+				}
+
+				function showSlides(n, no) {
+					var i;
+					var x = document.getElementsByClassName(slideId[no]);
+					if (n > x.length) {slideIndex[no] = 1} 
+					if (n < 1) {slideIndex[no] = x.length}
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					x[slideIndex[no]-1].style.display = "block";
+				}
+				
+			</script>
+			
+		</section>
+		<footer>
+			<ul class="other">
+				<li><a href="Contact.html">Contact</a></li>
+				<li><a href="About.html">About</a></li>
+				<li><a href="FAQ.html">FAQ</a></li>
+			</ul>
+			<div class="social">
+				<a href="https://www.facebook.com/"><img src="images/facebook_logo.png" alt="Facebook Logo"></a>
+				<a href="https://www.snapchat.com/"><img src="images/snapchat_logo.png" alt="Snapchat Logo"></a>
+				<a href="https://www.instagram.com/"><img src="images/instagram_logo.png" alt="Instagram Logo"></a>
+				<a href="https://twitter.com/?lang=en"><img src="images/twitter_logo.png" alt="Twitter Logo"></a>
+			</div>
+		</footer>
+	</body>
+</html>
